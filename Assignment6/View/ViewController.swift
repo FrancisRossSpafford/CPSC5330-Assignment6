@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Amount: UITextField!
     
     var currencyLogic = CurrencyLogic()
-    var amount : String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,14 +39,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Convert(_ sender: UIButton) {
-        //amount = loanLogic.calculateLoanAmount()
-        self.performSegue(withIdentifier: "MainTransition", sender: self)
+        if let inputText = Amount.text, let intValue = Int(inputText) {
+            // Use the unwrapped intValue instead of converting Amount.text again
+            currencyLogic.setAmount(intValue)
+            self.performSegue(withIdentifier: "MainTransition", sender: self)
+        } else {
+            // Show that the amount value is invalid by turning the text red and not changing the view.
+            Amount.textColor = .red
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MainTransition" {
-            let loanNavigation = segue.destination as! ConversionViewController
-            //loanNavigation.amount = amount
+            let conversionNavigation = segue.destination as! ConversionViewController
+            conversionNavigation.currencyLogic = currencyLogic
         }
     }
 }

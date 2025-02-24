@@ -238,6 +238,17 @@
                             <constraint firstItem="pEH-DK-c7j" firstAttribute="bottom" secondItem="J1Z-Qa-0o9" secondAttribute="bottom" constant="50" id="VBg-Rg-vhk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AmountLabel" destination="MPM-Qx-jyU" id="z0y-Od-Tm9"/>
+                        <outlet property="CDN1" destination="TO5-8l-TAP" id="NiT-p2-aKZ"/>
+                        <outlet property="CDN2" destination="jdW-PN-p06" id="8hJ-Wz-FXt"/>
+                        <outlet property="EUR1" destination="mKn-Uo-0GC" id="8iz-iv-8C8"/>
+                        <outlet property="EUR2" destination="bk9-WQ-UN5" id="mKO-xS-NfL"/>
+                        <outlet property="GBP1" destination="bJP-ML-dSd" id="Co9-TK-h2A"/>
+                        <outlet property="GBP2" destination="b2l-wH-Tqv" id="ekU-sa-4li"/>
+                        <outlet property="PES1" destination="sA2-XA-Vtp" id="UIz-ZZ-GyS"/>
+                        <outlet property="PES2" destination="uJo-mR-E2s" id="kdp-WG-waA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHE-7d-RvZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

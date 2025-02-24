@@ -9,15 +9,12 @@ import Foundation
 
 struct CurrencyLogic {
     
-    var roundedAmount : Int = 0
+    var Amount : Int = 0
     
-    var showGBP: Bool = false
-    var showCDN: Bool = false
-    var showEUR: Bool = false
-    var showPeso: Bool = false
-    
-    
-   
+    var showGBP: Bool = true
+    var showCDN: Bool = true
+    var showEUR: Bool = true
+    var showPeso: Bool = true
     
     mutating func setShowGBP(_ switchValue: Bool) {
         if switchValue {
@@ -50,6 +47,36 @@ struct CurrencyLogic {
             showPeso = false
         }
     }
+    
+    mutating func setAmount(_ AmountInUSD: Int) {
+        Amount = AmountInUSD
+    }
+    
+    func getAmountInGBP() -> Double {
+        let conversionRate: Double = 0.79
+        let amountInGBP: Double = Double(Amount) * conversionRate
+        return (amountInGBP)
+    }
+    
+    func getAmountInCDN() -> Double {
+        let conversionRate: Double = 1.42
+        let amountInCDN: Double = Double(Amount) * conversionRate
+        return (amountInCDN)
+    }
+    
+    func getAmountInEUR() -> Double {
+        let conversionRate: Double = 0.95
+        let amountInEUR: Double = Double(Amount) * conversionRate
+        return (amountInEUR)
+    }
+    
+    func getAmountInPesos() -> Double {
+        let conversionRate: Double = 20.43
+        let amountInPesos: Double = Double(Amount) * conversionRate
+        return (amountInPesos)
+    }
+    
+    
     
     
     
