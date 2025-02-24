@@ -16,6 +16,7 @@ struct CurrencyLogic {
     var showEUR: Bool = false
     var showPeso: Bool = false
     
+    
    
     
     mutating func setShowGBP(_ switchValue: Bool) {
