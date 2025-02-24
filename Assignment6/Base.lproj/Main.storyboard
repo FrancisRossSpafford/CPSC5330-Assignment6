@@ -55,6 +55,9 @@
                                                 <accessibility key="accessibilityConfiguration" label="British Pounds">
                                                     <accessibilityTraits key="traits" button="YES"/>
                                                 </accessibility>
+                                                <connections>
+                                                    <action selector="GBPChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="xju-Wg-TWe"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -69,6 +72,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="stQ-yv-hk5">
                                                 <rect key="frame" x="304" y="0.0" width="51" height="53.333333333333336"/>
+                                                <connections>
+                                                    <action selector="CDNChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vNf-Lw-4IK"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -83,6 +89,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-eW-5MK">
                                                 <rect key="frame" x="304" y="0.0" width="51" height="53.333333333333336"/>
+                                                <connections>
+                                                    <action selector="EURChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vo7-o3-EbK"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -97,6 +106,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ww1-Oa-oWx">
                                                 <rect key="frame" x="304" y="0.0" width="51" height="53.333333333333336"/>
+                                                <connections>
+                                                    <action selector="PesoChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fVS-Ui-6KQ"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -104,6 +116,9 @@
                                         <rect key="frame" x="0.0" y="535" width="353" height="224"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Convert"/>
+                                        <connections>
+                                            <action selector="Convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fo-yY-f2Q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -118,6 +133,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Amount" destination="eKS-3h-QN8" id="CSW-P3-qzd"/>
                         <segue destination="7Hz-YR-2ea" kind="presentation" identifier="MainTransition" id="A39-5W-IyO"/>
                     </connections>
                 </viewController>
